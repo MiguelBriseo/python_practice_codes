@@ -1,4 +1,6 @@
+# Editable variables, premium might be static and weight is a changeable variable
 premium = 125.00
+# Editable
 weight = 17.0
 
 # Ground Shipping
@@ -23,7 +25,7 @@ def drone_shipping(weight):
   else:
     return (weight * 14.25 + 0)
 
-# Cheapest Method of shipping
+# Cheapest Method of shipping, it compares the results of the different functions
 def cheap_method(weight):
   if ground_shipping(weight) < drone_shipping(weight) and ground_shipping(weight) < premium:
     return "Ground shipping is the cheapest method, and it costs: " + str(ground_shipping(weight))
@@ -32,5 +34,5 @@ def cheap_method(weight):
   elif premium < ground_shipping(weight) and premium < drone_shipping(weight):
     return "Premium ground shipping is the cheapest method, and it costs: " + str(premium)
 
-
+# Printing the return value of the cheap_method function. It tells the user the cheapest method and its cost.
 print(cheap_method(weight))
