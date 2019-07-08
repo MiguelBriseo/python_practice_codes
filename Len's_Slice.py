@@ -2,11 +2,12 @@
 toppings = ['pepperoni', 'pineapple', 'cheese', 'sausage', 'olives', 'anchovies', 'mushrooms']
 prices = [2, 6, 1, 3, 2, 7, 2]
 
-# Arrangements
+# Arrangements 1
 num_pizzas = len(toppings)
 pizzas = list(zip(prices, toppings))
 pizzas.sort()
 
+# Arrangements 2
 chepeast_pizza = pizzas[1]
 priciest_pizza = pizzas[-1]
 three_chepeast = pizzas[:2]
